@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+nav {
+  display: flex;
+  justify-content: space-around;
+  background: rgb(0, 50, 116);
+  color: white
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  align-items: center;
+  list-style: none;
+}
+
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import Nav from './components/Nav'
+import List from './components/List'
+import Case from './components/Case'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 function App() {
+  const [state, setState] = useState(0)
+
+  useEffect(() => 
+    fetch('http://localhost:8000/').then(data => {
+      console.log(data)
+      setState({
+        data: data
+      })
+    }), []
+  )
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+        <Switch>
+          <Route exact path='/home' component={List} />
+          <Route exact path='/:id' component={Case} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
