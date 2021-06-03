@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
 import { Button, Form, Header } from 'semantic-ui-react'
-import { Redirect } from 'react-router';
 
-function NewCase(props) {
+function EditCase(props) {
     const [title, setTitle] = useState('')
     const [date, setDate] = useState('')
     const [description, setDescription] = useState('')
@@ -97,4 +96,4 @@ function NewCase(props) {
     )
 }
 
-export default NewCase;
+export default EditCase;

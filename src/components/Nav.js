@@ -10,6 +10,7 @@ function Nav(props) {
         <Header as='h2' color='pink' className='app-title' textAlign='justified'>The Cases Diary</Header>
         <Container>
           <Menu.Item href='/home'>Home</Menu.Item>
+          <Menu.Item href='/new'>New Case</Menu.Item>
           <Menu.Item position='right'>Hello, {props.user}</Menu.Item>
           <Menu.Item position='right'>
             <Button href='/logout' padded='very' method='DELETE'>Logout</Button>

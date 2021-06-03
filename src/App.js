@@ -3,6 +3,7 @@ import './App.css';
 import Nav from './components/Nav'
 import List from './components/List'
 import Case from './components/Case'
+import NewCase from './components/NewCase'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Nav user='John'/>
         <Switch>
           <Route exact path='/home' component={List} />
+          <Route exact path='/new' component={NewCase} />
           <Route exact path='/:id' component={Case} />
         </Switch>
       </div>
