@@ -38,8 +38,8 @@ function EditCase(props) {
         event.preventDefault()
 
         try {
-            const response = await fetch('http://localhost:8000/api/entries/home', {
-                method: 'POST',
+            const response = await fetch('http://localhost:8000/api/entries/:id', {
+                method: 'PUT',
                 body: JSON.stringify({
                     title: title,
                     date: date,

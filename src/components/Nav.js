@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
 // import { Link } from 'react-router-dom'
-import { Container, Menu, Button, Header } from 'semantic-ui-react'
+import { Container, Menu, Button, Header, Search } from 'semantic-ui-react'
 
 function Nav(props) {
   return (
@@ -11,6 +11,7 @@ function Nav(props) {
         <Container>
           <Menu.Item href='/home'>Home</Menu.Item>
           <Menu.Item href='/new'>New Case</Menu.Item>
+          <Search placeholder='Search Cases'></Search>
           <Menu.Item position='right'>Hello, {props.user}</Menu.Item>
           <Menu.Item position='right'>
             <Button href='/logout' padded='very' method='DELETE'>Logout</Button>
