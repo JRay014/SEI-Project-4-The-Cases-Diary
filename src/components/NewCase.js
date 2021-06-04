@@ -53,7 +53,7 @@ function NewCase(props) {
                     'Access-Control-Allow-Origin': '*'
                 }
             })
-            const data = await response.json()
+            // const data = await response.json()
             // console.log(data)
             // setTitle(data.title)
             // setDate(data.date)
