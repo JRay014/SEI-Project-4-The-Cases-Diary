@@ -3,6 +3,7 @@ import '../App.css';
 import { Button, Form, Header } from 'semantic-ui-react'
 
 function EditCase(props) {
+    const [id, setId] = useState(props.match.params.id)
     const [title, setTitle] = useState('')
     const [date, setDate] = useState('')
     const [description, setDescription] = useState('')

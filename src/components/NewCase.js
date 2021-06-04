@@ -12,27 +12,27 @@ function NewCase(props) {
 
     const handleChangeTitle = (event) => {
         setTitle(event.target.value)
-        console.log(event.target.value)
+        // console.log(event.target.value)
     }
 
     const handleChangeDate = (event) => {
         setDate(event.target.value)
-        console.log(event.target.value)
+        // console.log(event.target.value)
     }
 
     const handleChangeDescription = (event) => {
         setDescription(event.target.value)
-        console.log(event.target.value)
+        // console.log(event.target.value)
     }
 
     const handleChangeDecision = (event) => {
         setDecision(event.target.value)
-        console.log(event.target.value)
+        // console.log(event.target.value)
     }
 
     const handleChangeKeywords = (event) => {
         setKeywords(event.target.value)
-        console.log(event.target.value)
+        // console.log(event.target.value)
     }
 
     const handleSubmit = async (event) => {
@@ -54,7 +54,7 @@ function NewCase(props) {
                 }
             })
             const data = await response.json()
-            console.log(data)
+            // console.log(data)
             // setTitle(data.title)
             // setDate(data.date)
             // setDescription(data.description)
@@ -64,6 +64,8 @@ function NewCase(props) {
         catch (err) {
             console.log('error: ', err)
         }
+        //redirects to the home page
+        props.history.push('/home');
     }
 
     return (
@@ -91,7 +93,7 @@ function NewCase(props) {
                     <input placeholder='Keywords' onChange={(evt) => handleChangeKeywords(evt)} />
                 </Form.Field>
             
-                <Button type='submit' onClick={handleSubmit} Redirect to='/home'>Submit</Button>
+                <Button type='submit' onClick={handleSubmit}>Add Case</Button>
             </Form>
         </>
     )

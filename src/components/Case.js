@@ -20,7 +20,7 @@ function Case(props) {
     const fetchCase = async () => {
         // console.log(id)
         // console.log(props.match.params)
-        const response = await fetch('http://localhost:8000/api/entries/' + props.match.params.id, {
+        const response = await fetch('http://localhost:8000/api/entries/' + id, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -43,8 +43,8 @@ function Case(props) {
             <p>{decision}</p>
             <aside>{keywords}</aside>
 
-            <Button secondary floated='right' href='/delete'>Delete</Button>
-            <Button primary floated='right' href='/edit'>Edit</Button>
+            <Button secondary floated='right' href={`/delete/${id}`}>Delete</Button>
+            <Button primary floated='right' href={`/edit/${id}`}>Edit</Button>
         </>
     );
 }
