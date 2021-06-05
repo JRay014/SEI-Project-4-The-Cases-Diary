@@ -13,7 +13,7 @@ function List() {
   },[]);
 
   const fetchList = async () => {
-    const response = await fetch('http://localhost:8000/api/entries/home', {
+    const response = await fetch(process.env.REACT_APP_API_URL + '/api/entries/home', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ function List() {
 
   const makeRequest = (event, id) => {
     event.preventDefault()
-    const url = 'http://localhost:8000/api/entries/' + id;
+    const url = process.env.REACT_APP_API_URL + '/api/entries/' + id;
     fetch(url, {
       method: 'GET',
       headers: {

@@ -23,7 +23,7 @@ function ConfirmDelete(props) {
     }
 
     const deleteCase = async () => {
-        await fetch('http://localhost:8000/api/entries/' + id, {
+        await fetch(process.env.REACT_APP_API_URL + '/api/entries/' + id, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

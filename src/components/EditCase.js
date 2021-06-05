@@ -15,7 +15,7 @@ function EditCase(props) {
     },[]);
     
     const fetchCase = async () => {
-        const response = await fetch('http://localhost:8000/api/entries/' + id, {
+        const response = await fetch(process.env.REACT_APP_API_URL + '/api/entries/' + id, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ function EditCase(props) {
         event.preventDefault()
 
         try {
-            const response = await fetch('http://localhost:8000/api/entries/' + id, {
+            const response = await fetch(process.env.REACT_APP_API_URL + '/api/entries/' + id, {
                 method: 'PUT',
                 body: JSON.stringify({
                     title: title,

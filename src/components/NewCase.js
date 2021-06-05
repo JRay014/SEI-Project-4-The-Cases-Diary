@@ -39,7 +39,7 @@ function NewCase(props) {
         event.preventDefault()
 
         try {
-            const response = await fetch('http://localhost:8000/api/entries/home', {
+            const response = await fetch(process.env.REACT_APP_API_URL + '/api/entries/home', {
                 method: 'POST',
                 body: JSON.stringify({
                     title: title,

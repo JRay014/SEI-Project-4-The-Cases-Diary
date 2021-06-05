@@ -20,7 +20,7 @@ function Case(props) {
     const fetchCase = async () => {
         // console.log(id)
         // console.log(props.match.params)
-        const response = await fetch('http://localhost:8000/api/entries/' + id, {
+        const response = await fetch(process.env.REACT_APP_API_URL + '/api/entries/' + id, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
