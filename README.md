@@ -43,4 +43,4 @@ Users Can interface with their entries database.
 - List organization 
 - User sharing
 - Document upload
-- Chat
+- Chat/Comments
