@@ -32,7 +32,9 @@ React Hooks
 
 ### Data Relationships
 
+Users Can interface with their entries database.
 
+![Data Relationships](readme-assets/Data-Relationships.jpg)
 
 ### Unsolved Problems and Future Features
 
