@@ -21,14 +21,14 @@ A user will be able to create an account and then access it through the app. The
 
 ### Technologies
 
-Python
-React
-SQL
-Postges
-React Router
-Peewee
-Semantic UI React
-React Hooks
+- Python
+- React
+- SQL
+- Postges
+- React Router
+- Peewee
+- Semantic UI React
+- React Hooks
 
 ### Data Relationships
 
@@ -38,9 +38,9 @@ Users Can interface with their entries database.
 
 ### Unsolved Problems and Future Features
 
-User functionality
-Search functionality
-List organization 
-User sharing
-Document upload
-Chat
+- User functionality
+- Search functionality
+- List organization 
+- User sharing
+- Document upload
+- Chat
