@@ -2,6 +2,7 @@
 A personal legal cases journal.
 
 Deployment: https://cases-diary-frontend.herokuapp.com/home
+
 Backend: https://github.com/JRay014/SEI-Project-4-The-Cases-Diary-BACKEND
 
 ### Description 
